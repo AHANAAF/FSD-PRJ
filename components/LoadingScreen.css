@@ -1,0 +1,90 @@
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../components/textures/LoadingScreen.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.loading-container {
+  text-align: center;
+  color: #ffffff; 
+  width: 80%; 
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.loading-title {
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.progress-bar-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 12px;
+  background-color: #444; 
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50; 
+  transition: width 0.4s ease-in-out;
+  border-radius: 6px;
+}
+
+.buffer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #888; 
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.progress-percentage {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.loading-animation {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #333333; 
+  border-top: 10px solid #4caf50; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
